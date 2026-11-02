@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вайб-кодинг на Claude Code — практический курс | zerocoder</title>
+  <meta name="description" content="Практический курс по вайб-кодингу на Claude Code: 12 уроков, 10+ проектов за 4 недели. От скриптов автоматизации до мультиагентных систем. С куратором и сертификатом.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="topbar" id="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__text">
+        <span class="topbar__dot" aria-hidden="true"></span>
+        Безлимитный доступ ко всем программам ИИ-направления со скидкой 90+%
+      </p>
+      <a class="topbar__link" href="#tariffs">Узнать подробнее <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="zerocoder — на главную">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3v26M3 16h26M6.8 6.8l18.4 18.4M25.2 6.8 6.8 25.2" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo__text">zerocoder<span class="logo__dot">.</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="#about">О курсе</a>
+        <a class="nav__link" href="#program">Программа</a>
+        <a class="nav__link" href="#projects">Проекты</a>
+        <a class="nav__link" href="#tariffs">Тарифы</a>
+        <a class="nav__link" href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="header__login" href="#tariffs">Вход для студентов</a>
+        <a class="btn btn--dark btn--sm" href="#tariffs">Начать обучение</a>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
+    <nav aria-label="Мобильная навигация">
+      <a href="#about">О курсе</a>
+      <a href="#program">Программа</a>
+      <a href="#projects">Проекты</a>
+      <a href="#tariffs">Тарифы</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--accent" href="#signup">Оставить заявку</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__glow hero__glow--orange" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--purple" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="eyebrow reveal">
+            <span class="eyebrow__pulse" aria-hidden="true"></span>
+            Практический курс · старт сразу после оплаты
+          </div>
+
+          <h1 class="hero__title reveal" data-delay="1">
+            Вайб-кодинг<br>
+            на <span class="marker">Claude&nbsp;Code</span>
+          </h1>
+
+          <p class="hero__lead reveal" data-delay="2">
+            Освойте самый мощный инструмент вайб-кодинга и соберите
+            <strong>10+ рабочих проектов за 4 недели</strong> — от скриптов автоматизации
+            до автономных ИИ-агентов и мультиагентных систем.
+          </p>
+
+          <ul class="hero__points reveal" data-delay="3">
+            <li>Без опыта программирования</li>
+            <li>Куратор и проверка заданий</li>
+            <li>Сертификат по окончании</li>
+          </ul>
+
+          <div class="hero__cta reveal" data-delay="4">
+            <a class="btn btn--accent btn--lg" href="#tariffs">
+              Выбрать тариф
+              <svg class="btn__arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#program">Смотреть программу</a>
+          </div>
+
+          <div class="hero__social proof reveal" data-delay="5">
+            <div class="rating">
+              <span class="rating__stars" aria-hidden="true">★★★★★</span>
+              <span class="rating__value">4.9</span>
+            </div>
+            <p class="hero__reviews"><strong>1 559 отзывов</strong> на независимых площадках</p>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" data-delay="3">
+          <div class="terminal" aria-label="Демонстрация работы Claude Code">
+            <div class="terminal__bar">
+              <span class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="terminal__tab">claude — zsh</span>
+              <span class="terminal__badge">Claude Code</span>
+            </div>
+            <div class="terminal__body" id="terminalBody">
+              <div class="terminal__line terminal__line--muted"><span class="t-prompt">~/projects</span> <span class="t-dollar">$</span> <span id="typedCommand"></span><span class="t-cursor" aria-hidden="true"></span></div>
+              <div class="t-line" data-step="1"><span class="t-star">✻</span> Добро пожаловать в <b>Claude Code</b></div>
+              <div class="t-line" data-step="2"><span class="t-user">&gt;</span> собери лендинг для кофейни и задеплой</div>
+              <div class="t-line" data-step="3"><span class="t-tool">●</span> Изучаю структуру проекта <span class="t-muted">(8 файлов)</span></div>
+              <div class="t-line" data-step="4"><span class="t-tool">●</span> Создаю <span class="t-file">index.html</span>, <span class="t-file">styles.css</span>, <span class="t-file">app.js</span></div>
+              <div class="t-line" data-step="5"><span class="t-tool">●</span> Проверяю адаптивность и форму заявки</div>
+              <div class="t-line" data-step="6"><span class="t-ok">✓</span> Готово за <b>2 мин 14 сек</b>. Открыть preview?</div>
+              <div class="t-line t-line--actions" data-step="7">
+                <span class="t-chip">▶ preview</span>
+                <span class="t-chip">git commit</span>
+                <span class="t-chip">deploy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card float-card--rating" aria-hidden="true">
+            <span class="float-card__emoji">✦</span>
+            <div>
+              <strong>10+ проектов</strong>
+              <span>в портфолио</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--agent" aria-hidden="true">
+            <span class="float-card__status"></span>
+            <div>
+              <strong>Агент работает</strong>
+              <span>3 задачи параллельно</span>
+            </div>
+          </div>
+
+          <div class="hero__stack" aria-hidden="true">
+            <span>CLAUDE.md</span>
+            <span>MCP</span>
+            <span>Skills</span>
+            <span>Agents</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Vibe coding</span><span class="ticker__star">✳</span>
+        <span>Claude Code</span><span class="ticker__star">✳</span>
+        <span>AI agents</span><span class="ticker__star">✳</span>
+        <span>MCP</span><span class="ticker__star">✳</span>
+        <span>Skills</span><span class="ticker__star">✳</span>
+        <span>Деплой</span><span class="ticker__star">✳</span>
+        <span>Автоматизация</span><span class="ticker__star">✳</span>
+        <span>Vibe coding</span><span class="ticker__star">✳</span>
+        <span>Claude Code</span><span class="ticker__star">✳</span>
+        <span>AI agents</span><span class="ticker__star">✳</span>
+        <span>MCP</span><span class="ticker__star">✳</span>
+        <span>Skills</span><span class="ticker__star">✳</span>
+        <span>Деплой</span><span class="ticker__star">✳</span>
+        <span>Автоматизация</span><span class="ticker__star">✳</span>
+      </div>
+    </div>
+
+    <!-- RATINGS -->
+    <section class="ratings">
+      <div class="container ratings__inner">
+        <p class="ratings__label">Нас рекомендуют</p>
+        <div class="ratings__list">
+          <div class="rating-card"><span class="rating-card__score">4.7</span><span class="rating-card__platform">Яндекс Карты</span></div>
+          <div class="rating-card"><span class="rating-card__score">4.6</span><span class="rating-card__platform">Отзовик</span></div>
+          <div class="rating-card"><span class="rating-card__score">4.9</span><span class="rating-card__platform">Отзывы учеников</span></div>
+          <div class="rating-card"><span class="rating-card__score">4.77</span><span class="rating-card__platform">2ГИС</span></div>
+          <div class="rating-card"><span class="rating-card__score">4.9</span><span class="rating-card__platform">Smart Ranking</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CLAUDE CODE -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="kicker reveal">Почему Claude Code</p>
+            <h2 class="h2 reveal" data-delay="1">Один инструмент<br>вместо десяти</h2>
+          </div>
+          <p class="section__intro reveal" data-delay="2">
+            Claude Code занимает первые строчки в рейтингах профессиональных ИИ-инструментов
+            и берёт на себя всю техническую рутину. Вы ставите цель обычным языком —
+            он пишет код, запускает его и проверяет результат.
+          </p>
+        </div>
+
+        <div class="bento">
+          <article class="bento__card bento__card--wide reveal">
+            <div class="bento__icon">01</div>
+            <h3>Видит проект целиком</h3>
+            <p>Не один файл, а всю структуру папок. Вносит изменения сразу в десятки файлов и запоминает ваши правила благодаря <code>CLAUDE.md</code>.</p>
+            <div class="file-tree" aria-hidden="true">
+              <div class="file-tree__row"><span class="file-tree__folder">▾ project</span><span class="file-tree__time">готово</span></div>
+              <div class="file-tree__row"><span>├─ CLAUDE.md</span><span class="file-tree__time">правила</span></div>
+              <div class="file-tree__row"><span>├─ src/</span><span class="file-tree__time">12 файлов</span></div>
+              <div class="file-tree__row"><span>├─ tests/</span><span class="file-tree__time">8 тестов</span></div>
+              <div class="file-tree__row"><span>└─ package.json</span><span class="file-tree__time">ok</span></div>
+              <div class="file-tree__glow"></div>
+            </div>
+          </article>
+
+          <article class="bento__card bento__card--agents reveal" data-delay="1">
+            <div class="bento__icon">02</div>
+            <h3>Мультиагентность</h3>
+            <p>Целая команда виртуальных сотрудников: один собирает данные, второй пишет логику, третий сохраняет результат.</p>
+            <div class="agents" aria-hidden="true">
+              <div class="agent"><span class="agent__dot agent__dot--orange"></span>Research</div>
+              <div class="agent"><span class="agent__dot agent__dot--purple"></span>Coder</div>
+              <div class="agent"><span class="agent__dot agent__dot--green"></span>QA</div>
+              <div class="agent agent--plus">+3</div>
+            </div>
+          </article>
+
+          <article class="bento__card bento__card--score reveal" data-delay="2">
+            <div class="bento__score">80.9<span>%</span></div>
+            <p>рекорд на SWE-bench — отраслевом тесте по исправлению реальных багов. У аналогов — около 38%.</p>
+            <span class="bento__caption">8 из 10 сложных задач решает самостоятельно</span>
+          </article>
+
+          <article class="bento__card bento__card--safe reveal">
+            <div class="bento__icon">03</div>
+            <h3>Безопасность данных</h3>
+            <p>Запросы идут напрямую разработчику, без сторонних серверов. Подходит для коммерческих проектов под NDA.</p>
+            <div class="shield" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 41 11v12c0 10-7 17.5-17 21C14 40.5 7 33 7 23V11L24 4Z" stroke="currentColor" stroke-width="2.4"/><path d="m16 24 6 6 11-12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </article>
+
+          <article class="bento__card bento__card--price reveal" data-delay="1">
+            <div class="bento__icon">04</div>
+            <h3>$20 / мес</h3>
+            <p>Прозрачные лимиты для сложных задач. Без скрытых доплат, которые у аналогов доводят чек до $60.</p>
+            <div class="price-bars" aria-hidden="true"><i style="--h:38%"></i><i style="--h:56%"></i><i style="--h:44%"></i><i style="--h:72%"></i><i style="--h:64%"></i><i style="--h:92%"></i></div>
+          </article>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat"><span class="stat__num" data-count="10" data-suffix="+">0</span><span class="stat__label">проектов в портфолио</span></div>
+          <div class="stat"><span class="stat__num" data-count="12">0</span><span class="stat__label">уроков и 2 бонуса</span></div>
+          <div class="stat"><span class="stat__num" data-count="4">0</span><span class="stat__label">недели до результата</span></div>
+          <div class="stat"><span class="stat__num" data-count="300" data-suffix="+">0</span><span class="stat__label">млн ₽ заказов через центр</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="section section--dark" id="program">
+      <div class="container">
+        <div class="section__head section__head--dark">
+          <div>
+            <p class="kicker kicker--light reveal">Программа курса</p>
+            <h2 class="h2 reveal" data-delay="1">От первого запуска<br>до своего агента</h2>
+          </div>
+          <div class="section__aside reveal" data-delay="2">
+            <p>12 уроков, 2 бонуса для тарифов Бизнес и ВИП. Программа обновляется под новые модели и инструменты.</p>
+            <span class="pill pill--light">4 недели · 2–3 часа в неделю</span>
+          </div>
+        </div>
+
+        <div class="accordion accordion--dark" id="programAccordion">
+          <article class="acc acc--open">
+            <button class="acc__head" type="button" aria-expanded="true">
+              <span class="acc__num">01</span>
+              <span class="acc__title">Claude Code: настройка инфраструктуры, подключение и основные команды</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Ставим Claude Code, разбираемся с терминалом и подпиской, подключаем проект и учимся базовым командам. Первый рабочий сценарий — уже на уроке.</p>
+              <div class="tags"><span>Установка</span><span>CLI</span><span>Первый проект</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">02</span>
+              <span class="acc__title">Промптинг в Claude Code: как составлять запросы и настраивать CLAUDE.md</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Учимся ставить задачи так, чтобы агент выдавал предсказуемый результат. Создаём файл памяти проекта и правила работы над задачами.</p>
+              <div class="tags"><span>Промптинг</span><span>CLAUDE.md</span><span>Контекст</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">03</span>
+              <span class="acc__title">Архитектура ИИ-агентов. Работа с файлами, таблицами и данными</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Разбираем, как устроены агенты, и собираем первый: наводим порядок в файлах и обрабатываем таблицы по заданным правилам.</p>
+              <div class="tags"><span>Агенты</span><span>Excel</span><span>Автоматизация</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">04</span>
+              <span class="acc__title">Глубокая настройка CLI-агентов в Claude Code</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Настраиваем права доступа, ограничения и логику поведения персонального помощника под конкретный рабочий процесс.</p>
+              <div class="tags"><span>Permissions</span><span>Хуки</span><span>Персональный агент</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">05</span>
+              <span class="acc__title">Создание конверсионных сайтов с помощью Claude Code</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Собираем полноценный лендинг с современной структурой, анимациями и рабочей формой заявок. Запускаем на локальном сервере.</p>
+              <div class="tags"><span>HTML/CSS</span><span>UI</span><span>Формы</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">06</span>
+              <span class="acc__title">Локальные модели и автоматизация рутинных задач</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Разворачиваем модель локально и автоматизируем работу с приватными данными: клиентской базой и договорами — без выхода в интернет.</p>
+              <div class="tags"><span>Ollama</span><span>Локальные модели</span><span>Приватность</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">07</span>
+              <span class="acc__title">MCP: как подключать Claude Code к внешним инструментам</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Подключаем MCP-серверы и собираем SEO-аудитора: агент сам выходит в интернет, обходит сайты конкурентов и готовит отчёт.</p>
+              <div class="tags"><span>MCP</span><span>Парсинг</span><span>SEO-аудит</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">08</span>
+              <span class="acc__title">Скилы в Claude Code: как усиливать агента под свои задачи</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Создаём собственный набор Skills под нишу: исследования, продажи или работу с документами. Навыки переиспользуются в любых проектах.</p>
+              <div class="tags"><span>Skills</span><span>Автоматизация</span><span>Пакет навыков</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">09</span>
+              <span class="acc__title">Контент-завод для фриланса и бизнеса: реальные цепочки процессов</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Строим цепочку, которая парсит источник, формирует контент-план, генерирует серию постов и публикует их по расписанию.</p>
+              <div class="tags"><span>Контент</span><span>Парсинг</span><span>Автопостинг</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">10</span>
+              <span class="acc__title">Мультиагентные системы и Claude Agents Team</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Распределяем роли между агентами и собираем команду, которая совместно решает объёмную задачу: от исследования до готового результата.</p>
+              <div class="tags"><span>Мультиагентность</span><span>Роли</span><span>Оркестрация</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">11</span>
+              <span class="acc__title">Деплой проекта: сервер, SSH, SSL и базовая безопасность</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Переносим систему из локальной среды на реальный сервер: настраиваем SSH, SSL, домен и переменные окружения.</p>
+              <div class="tags"><span>Деплой</span><span>SSH</span><span>Безопасность</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">12</span>
+              <span class="acc__title">Монетизация навыка и финальный проект под личную задачу</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Упаковываем навык в услугу, считаем стоимость и собираем комплексный проект, который можно внедрить или продать заказчику.</p>
+              <div class="tags"><span>Монетизация</span><span>Портфолио</span><span>Финальный кейс</span></div>
+            </div></div>
+          </article>
+
+          <article class="acc acc--bonus">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__num">+</span>
+              <span class="acc__title">Бонус: GitHub и Docker для развёртывания</span>
+              <span class="acc__badge">Бизнес и ВИП</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body">
+              <p>Два дополнительных урока: система контроля версий GitHub и контейнеры Docker для простого развёртывания проекта на сервере.</p>
+              <div class="tags"><span>GitHub</span><span>Docker</span><span>DevOps</span></div>
+            </div></div>
+          </article>
+        </div>
+
+        <div class="section__cta reveal">
+          <a class="btn btn--accent btn--lg" href="#tariffs">Выбрать тариф</a>
+          <p>Доступ к урокам — сразу после оплаты</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="kicker reveal">Практика с первого дня</p>
+            <h2 class="h2 reveal" data-delay="1">11 проектов,<br>которые останутся у вас</h2>
+          </div>
+          <p class="section__intro reveal" data-delay="2">
+            Не учебные упражнения, а решения под реальные задачи рынка: личные помощники,
+            контентные инструменты, аналитика, боты и MVP для бизнеса.
+          </p>
+        </div>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project__top"><span class="project__num">01</span><span class="project__tag">Автоматизация</span></div>
+            <h3>«Умный реорганизатор»</h3>
+            <p>ИИ-агент, который наводит порядок в рабочих документах и папках по строгим правилам через CLAUDE.md.</p>
+            <div class="project__foot"><span>CLAUDE.md</span><span>Files</span></div>
+          </article>
+
+          <article class="project reveal" data-delay="1">
+            <div class="project__top"><span class="project__num">02</span><span class="project__tag">Аналитика</span></div>
+            <h3>«Панель продаж»</h3>
+            <p>Скрипт для бизнеса: читает сырые данные из Excel, собирает сводную таблицу и выгружает PDF-отчёт.</p>
+            <div class="project__foot"><span>Python</span><span>Excel</span><span>PDF</span></div>
+          </article>
+
+          <article class="project reveal" data-delay="2">
+            <div class="project__top"><span class="project__num">03</span><span class="project__tag">Агенты</span></div>
+            <h3>Персональный CLI-агент</h3>
+            <p>Глубоко настроенный помощник под ваш рабочий процесс: доступы, ограничения и логика поведения.</p>
+            <div class="project__foot"><span>CLI</span><span>Permissions</span></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__top"><span class="project__num">04</span><span class="project__tag">Веб</span></div>
+            <h3>Конверсионный сайт</h3>
+            <p>Полноценная страница с современной структурой, интерфейсом и рабочей формой сбора заявок.</p>
+            <div class="project__foot"><span>HTML/CSS</span><span>JS</span></div>
+          </article>
+
+          <article class="project reveal" data-delay="1">
+            <div class="project__top"><span class="project__num">05</span><span class="project__tag">Безопасность</span></div>
+            <h3>Локальный сценарий</h3>
+            <p>Обработка клиентской базы и приватных договоров на локальной модели — без доступа в интернет.</p>
+            <div class="project__foot"><span>Ollama</span><span>Privacy</span></div>
+          </article>
+
+          <article class="project reveal" data-delay="2">
+            <div class="project__top"><span class="project__num">06</span><span class="project__tag">MCP</span></div>
+            <h3>«SEO-аудит конкурента»</h3>
+            <p>Агент автономно обходит сайты конкурентов, собирает данные и формирует аналитический отчёт.</p>
+            <div class="project__foot"><span>MCP</span><span>Web</span></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__top"><span class="project__num">07</span><span class="project__tag">Skills</span></div>
+            <h3>Собственный набор Skills</h3>
+            <p>Пакет специализированных навыков под нишу: исследования, продажи, работа с документами.</p>
+            <div class="project__foot"><span>Skills</span><span>Reuse</span></div>
+          </article>
+
+          <article class="project reveal" data-delay="1">
+            <div class="project__top"><span class="project__num">08</span><span class="project__tag">Контент</span></div>
+            <h3>«Контент-завод»</h3>
+            <p>Цепочка: парсит источник, формирует контент-план, генерирует посты и публикует по расписанию.</p>
+            <div class="project__foot"><span>Parse</span><span>Auto-post</span></div>
+          </article>
+
+          <article class="project reveal" data-delay="2">
+            <div class="project__top"><span class="project__num">09</span><span class="project__tag">Мультиагент</span></div>
+            <h3>«Команда агентов»</h3>
+            <p>Несколько нейросетей распределяют роли и совместно трудятся над одной объёмной задачей.</p>
+            <div class="project__foot"><span>Agents</span><span>Orchestration</span></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__top"><span class="project__num">10</span><span class="project__tag">Деплой</span></div>
+            <h3>Запуск на сервере</h3>
+            <p>Перенос мультиагентной системы на реальный сервер с SSH, SSL и переменными окружения.</p>
+            <div class="project__foot"><span>VPS</span><span>SSL</span></div>
+          </article>
+
+          <article class="project project--final reveal" data-delay="1">
+            <div class="project__top"><span class="project__num">11</span><span class="project__tag project__tag--accent">Финал</span></div>
+            <h3>Автономный проект под вашу задачу</h3>
+            <p>Комплексное решение, готовое к внедрению в процессы компании или коммерческой продаже.</p>
+            <div class="project__foot"><span>Portfolio</span><span>Product</span></div>
+            <a class="project__link" href="#signup" aria-label="Оставить заявку на курс">Собрать свой проект <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="section section--cream">
+      <div class="container outcomes">
+        <div class="outcomes__left">
+          <p class="kicker reveal">Результат</p>
+          <h2 class="h2 reveal" data-delay="1">После курса вы<br>сможете</h2>
+          <p class="outcomes__lead reveal" data-delay="2">Не просто повторять инструкции, а выступать архитектором: ставить задачу, проверять безопасность и доводить любое решение до рабочего состояния.</p>
+          <a class="btn btn--dark btn--lg reveal" data-delay="3" href="#signup">Присоединиться</a>
+        </div>
+        <ul class="outcomes__list">
+          <li class="reveal">
+            <span class="check" aria-hidden="true">✓</span>
+            <div><strong>Освоите Claude Code целиком</strong><p>От базовых команд и управления контекстом до мультиагентных систем и локальных моделей.</p></div>
+          </li>
+          <li class="reveal" data-delay="1">
+            <span class="check" aria-hidden="true">✓</span>
+            <div><strong>Соберёте 10+ проектов</strong><p>От автоматизации Excel и порядка в документах до SEO-аудитора и контент-завода.</p></div>
+          </li>
+          <li class="reveal" data-delay="2">
+            <span class="check" aria-hidden="true">✓</span>
+            <div><strong>Сократите время и затраты</strong><p>То, на что раньше уходили недели и сотни тысяч рублей, будете собирать за пару вечеров.</p></div>
+          </li>
+          <li class="reveal" data-delay="3">
+            <span class="check" aria-hidden="true">✓</span>
+            <div><strong>Получите продукт под свою задачу</strong><p>Финальный комплексный кейс для внедрения, продажи или портфолио.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- AUDIENCE -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="kicker reveal">Для кого</p>
+            <h2 class="h2 reveal" data-delay="1">Курс подойдёт,<br>если вы</h2>
+          </div>
+          <p class="section__intro reveal" data-delay="2">Не нужен технический бэкграунд. Нужны интерес к цифровым продуктам и 2–3 часа в неделю на практику.</p>
+        </div>
+        <div class="audience">
+          <article class="audience__card reveal">
+            <span class="audience__icon">✦</span>
+            <h3>Новичок в разработке</h3>
+            <p>Хотите создавать цифровые продукты, но не готовы начинать с долгого изучения синтаксиса и академической базы.</p>
+          </article>
+          <article class="audience__card reveal" data-delay="1">
+            <span class="audience__icon">↻</span>
+            <h3>Пробовали ИИ-инструменты</h3>
+            <p>Уже знакомы с ChatGPT или Cursor, но действуете хаотично. Нужен понятный маршрут от настройки до результата.</p>
+          </article>
+          <article class="audience__card reveal" data-delay="2">
+            <span class="audience__icon">◎</span>
+            <h3>Фрилансер или специалист</h3>
+            <p>Маркетолог, контент-менеджер, продакт или ассистент — хотите быстрее собирать инструменты и автоматизации.</p>
+          </article>
+          <article class="audience__card reveal">
+            <span class="audience__icon">◆</span>
+            <h3>Предприниматель</h3>
+            <p>Нужно быстро проверять гипотезы, собирать MVP и не зависеть от подрядчиков на каждом шаге.</p>
+          </article>
+          <article class="audience__card reveal" data-delay="1">
+            <span class="audience__icon">▲</span>
+            <h3>Студент</h3>
+            <p>Важен короткий путь до результата, понятные проекты для портфолио и современный прикладной навык.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTS -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="kicker reveal">Эксперты</p>
+            <h2 class="h2 reveal" data-delay="1">Учитесь у практиков</h2>
+          </div>
+          <p class="section__intro reveal" data-delay="2">Преподаватели, которые ежедневно используют нейросети в работе и делают автоматизации для клиентов.</p>
+        </div>
+        <div class="experts">
+          <article class="expert reveal">
+            <div class="expert__photo expert__photo--a" aria-hidden="true"><span>КЗ</span></div>
+            <div class="expert__body">
+              <p class="expert__role">Методист курса</p>
+              <h3>Ксения Зайцева</h3>
+              <p>Эксперт по нейросетям и Product Owner взрослых программ. Более 10 лет в образовании, программы прошли 8 000+ студентов.</p>
+              <ul>
+                <li>Авторская методика обучения с 2014 года</li>
+                <li>Почти 3 года ежедневной практики с ИИ</li>
+              </ul>
+            </div>
+          </article>
+          <article class="expert reveal" data-delay="1">
+            <div class="expert__photo expert__photo--b" aria-hidden="true"><span>ДГ</span></div>
+            <div class="expert__body">
+              <p class="expert__role">Преподаватель курса</p>
+              <h3>Даниил Гаврилов</h3>
+              <p>Автор YouTube-канала «Продуктивный совет», эксперт по ИИ-инструментам и автоматизации. 56 000+ подписчиков.</p>
+              <ul>
+                <li>Внедряет ИИ в работу команд и бизнеса</li>
+                <li>Делает автоматизации под задачи клиентов</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER -->
+    <section class="section">
+      <div class="container">
+        <div class="career">
+          <div class="career__head reveal">
+            <p class="kicker kicker--light">Карьерный центр</p>
+            <h2 class="h2 h2--light">Доведём до первых<br>заказов и работы</h2>
+            <p>Сопровождаем на каждом этапе — от портфолио до оплаты первых заказов. На большинстве программ выход на рынок начинается уже со 2-го месяца.</p>
+            <a class="btn btn--accent btn--lg" href="#signup">Обсудить карьеру</a>
+          </div>
+          <div class="career__stats">
+            <div class="career__stat reveal"><span data-count="300" data-suffix="+">0</span><p>млн рублей — объём заказов через карьерный центр в 2025 году</p></div>
+            <div class="career__stat reveal" data-delay="1"><span data-count="50" data-suffix="+">0</span><p>компаний-партнёров готовы принять студентов</p></div>
+            <div class="career__stat reveal" data-delay="2"><span data-count="30" data-suffix="%">0</span><p>стажировок заканчиваются трудоустройством</p></div>
+            <div class="career__stat reveal" data-delay="3"><span data-count="2" data-prefix="со " data-suffix="-го">0</span><p>месяца обучения — средний старт выхода на рынок</p></div>
+          </div>
+        </div>
+        <p class="career__note">* Данные Карьерного центра zerocoder за 2025 год. Результат зависит от выполнения учебного плана, качества портфолио и активности студента.</p>
+      </div>
+    </section>
+
+    <!-- TARIFFS -->
+    <section class="section section--cream" id="tariffs">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <div>
+            <p class="kicker reveal">Тарифы</p>
+            <h2 class="h2 reveal" data-delay="1">Выберите формат<br>обучения</h2>
+          </div>
+          <p class="section__intro reveal" data-delay="2">Оплата сразу или в рассрочку на 24 месяца без переплат. Возврат в течение 14 дней, если курс не подошёл.</p>
+        </div>
+
+        <div class="billing reveal" role="group" aria-label="Способ оплаты">
+          <button class="billing__btn is-active" type="button" data-billing="full" aria-pressed="true">Оплатить сразу</button>
+          <button class="billing__btn" type="button" data-billing="month" aria-pressed="false">В рассрочку</button>
+          <span class="billing__save">−48%</span>
+        </div>
+
+        <div class="tariffs">
+          <article class="tariff reveal">
+            <div class="tariff__head">
+              <h3>Базовый</h3>
+              <p>Для самостоятельного старта</p>
+            </div>
+            <div class="tariff__price">
+              <span class="tariff__old">57 500 ₽</span>
+              <span class="tariff__now" data-full="29 900 ₽" data-month="1 246 ₽/мес">29 900 ₽</span>
+              <span class="tariff__note" data-full="или 1 246 ₽/мес в рассрочку на 24 месяца" data-month="рассрочка на 24 месяца, без переплат">или 1 246 ₽/мес в рассрочку на 24 месяца</span>
+            </div>
+            <ul class="tariff__list">
+              <li>Доступ к 1–12 уроку</li>
+              <li>Практические задания с проверкой куратора</li>
+              <li>Доступ на 3 месяца к платформе</li>
+              <li>Сертификат</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#signup" data-tariff="Базовый">Оставить заявку</a>
+          </article>
+
+          <article class="tariff tariff--popular reveal" data-delay="1">
+            <span class="tariff__badge">Выбирают чаще всего</span>
+            <div class="tariff__head">
+              <h3>Бизнес</h3>
+              <p>Для работы и первых заказов</p>
+            </div>
+            <div class="tariff__price">
+              <span class="tariff__old">69 000 ₽</span>
+              <span class="tariff__now" data-full="39 900 ₽" data-month="1 663 ₽/мес">39 900 ₽</span>
+              <span class="tariff__note" data-full="или 1 663 ₽/мес в рассрочку на 24 месяца" data-month="рассрочка на 24 месяца, без переплат">или 1 663 ₽/мес в рассрочку на 24 месяца</span>
+            </div>
+            <ul class="tariff__list">
+              <li>Всё, что входит в «Базовый»</li>
+              <li>Бонус: GitHub и Docker</li>
+              <li>Поддержка куратора 2 месяца</li>
+              <li>Доступ на 4 месяца к платформе</li>
+              <li>Чат на учебной платформе</li>
+              <li>1 консультация с куратором</li>
+              <li>6 месяцев Нейроклуба</li>
+            </ul>
+            <a class="btn btn--accent btn--block" href="#signup" data-tariff="Бизнес">Оставить заявку</a>
+          </article>
+
+          <article class="tariff reveal" data-delay="2">
+            <div class="tariff__head">
+              <h3>ВИП</h3>
+              <p>Максимум поддержки</p>
+            </div>
+            <div class="tariff__price">
+              <span class="tariff__old">130 000 ₽</span>
+              <span class="tariff__now" data-full="59 900 ₽" data-month="2 495 ₽/мес">59 900 ₽</span>
+              <span class="tariff__note" data-full="или 2 495 ₽/мес в рассрочку на 24 месяца" data-month="рассрочка на 24 месяца, без переплат">или 2 495 ₽/мес в рассрочку на 24 месяца</span>
+            </div>
+            <ul class="tariff__list">
+              <li>Всё, что входит в «Бизнес»</li>
+              <li>Доступ на 5 месяцев к платформе</li>
+              <li>Нейроклуб навсегда</li>
+              <li>2 месяца поддержки ВИП-менеджера</li>
+              <li>Неограниченные консультации с куратором</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#signup" data-tariff="ВИП">Оставить заявку</a>
+          </article>
+        </div>
+
+        <div class="guarantee reveal">
+          <span class="guarantee__icon" aria-hidden="true">↺</span>
+          <p><strong>Гарантия возврата 14 дней.</strong> Если курс не подошёл — вернём оплату без лишних вопросов.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="kicker reveal">Отзывы</p>
+            <h2 class="h2 reveal" data-delay="1">Что говорят<br>студенты</h2>
+          </div>
+          <div class="section__aside reveal" data-delay="2">
+            <div class="rating rating--big"><span class="rating__stars" aria-hidden="true">★★★★★</span><span class="rating__value">4.9</span></div>
+            <p>Средняя оценка по 1 559 отзывам</p>
+          </div>
+        </div>
+        <div class="reviews">
+          <article class="review reveal">
+            <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Пришла без опыта в коде. Через месяц собрала парсер и дашборд для своей команды — теперь это часть рабочего процесса, а не эксперимент».</p>
+            <div class="review__author"><span class="review__avatar">А</span><div><strong>Анна К.</strong><span>Маркетолог</span></div></div>
+          </article>
+          <article class="review reveal" data-delay="1">
+            <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Главное — перестал бояться терминала. Claude Code делает рутину, а я думаю про архитектуру и результат. Первый клиентский проект сдал ещё во время курса».</p>
+            <div class="review__author"><span class="review__avatar review__avatar--purple">М</span><div><strong>Максим Р.</strong><span>Фрилансер</span></div></div>
+          </article>
+          <article class="review reveal" data-delay="2">
+            <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+            <p>«Мультиагентная система и деплой — то, ради чего шёл. Всё по шагам, с проверкой куратора. Финальный проект сразу ушёл в продакшн».</p>
+            <div class="review__author"><span class="review__avatar review__avatar--green">И</span><div><strong>Игорь Т.</strong><span>Продакт-менеджер</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--cream" id="faq">
+      <div class="container faq">
+        <div class="faq__head">
+          <p class="kicker reveal">FAQ</p>
+          <h2 class="h2 reveal" data-delay="1">Частые<br>вопросы</h2>
+          <p class="reveal" data-delay="2">Не нашли ответ? Напишите нам — менеджер свяжется в течение 15 минут.</p>
+          <a class="btn btn--dark" href="#signup">Задать вопрос</a>
+        </div>
+        <div class="accordion accordion--light">
+          <article class="acc acc--open">
+            <button class="acc__head" type="button" aria-expanded="true">
+              <span class="acc__title">Нужен ли опыт программирования?</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body"><p>Нет. Курс рассчитан на новичков: мы начинаем с установки и базовых команд и постепенно доходим до агентов. Важнее интерес к цифровым продуктам и готовность практиковаться 2–3 часа в неделю.</p></div></div>
+          </article>
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__title">Что нужно для прохождения курса?</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body"><p>Компьютер (Windows, macOS или Linux), стабильный интернет и подписка Claude. Как оформить доступ и настроить окружение — покажем на первом уроке.</p></div></div>
+          </article>
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__title">Сколько времени нужно в неделю?</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body"><p>В среднем 2–3 часа: короткие уроки и практика. Доступ к платформе остаётся на 3–5 месяцев в зависимости от тарифа, поэтому можно двигаться в своём темпе.</p></div></div>
+          </article>
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__title">Claude Code работает из России?</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body"><p>На курсе разбираем рабочие способы доступа и альтернативы, включая локальные модели. Вы сможете продолжить практику даже при ограничениях на зарубежные сервисы.</p></div></div>
+          </article>
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__title">Выдаёте ли сертификат?</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body"><p>Да, после выполнения практических заданий вы получите сертификат zerocoder. На профессиональных программах доступен документ о повышении квалификации государственного образца.</p></div></div>
+          </article>
+          <article class="acc">
+            <button class="acc__head" type="button" aria-expanded="false">
+              <span class="acc__title">Можно ли оплатить в рассрочку?</span>
+              <span class="acc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc__panel"><div class="acc__body"><p>Да, доступна рассрочка на 24 месяца без переплат. Точные условия и ежемесячный платёж подтвердит менеджер при оформлении заявки.</p></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNUP -->
+    <section class="signup" id="signup">
+      <div class="container signup__grid">
+        <div class="signup__content">
+          <p class="kicker kicker--light reveal">Старт обучения</p>
+          <h2 class="h2 h2--light reveal" data-delay="1">Соберите первого<br>агента уже на этой неделе</h2>
+          <p class="signup__lead reveal" data-delay="2">Оставьте заявку — менеджер свяжется в течение 15 минут, поможет выбрать тариф и ответит на вопросы.</p>
+          <ul class="signup__points reveal" data-delay="3">
+            <li>Доступ сразу после оплаты</li>
+            <li>Возврат в течение 14 дней</li>
+            <li>Рассрочка на 24 месяца</li>
+          </ul>
+          <div class="signup__contacts reveal" data-delay="4">
+            <a href="tel:+79393283812">+7 (939) 328-38-12</a>
+            <a href="mailto:care@zerocoder.ru">care@zerocoder.ru</a>
+          </div>
+        </div>
+
+        <form class="form reveal" id="signupForm" novalidate>
+          <div class="form__head">
+            <h3>Заявка на курс</h3>
+            <p>Заполните форму — это займёт минуту</p>
+          </div>
+          <div class="form__row">
+            <label class="field">
+              <span>Ваше имя</span>
+              <input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
+              <em class="field__error">Введите имя</em>
+            </label>
+            <label class="field">
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+              <em class="field__error">Введите корректный телефон</em>
+            </label>
+          </div>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="name@example.com" autocomplete="email" required>
+            <em class="field__error">Введите корректный email</em>
+          </label>
+          <label class="field">
+            <span>Тариф</span>
+            <select name="tariff" id="formTariff">
+              <option value="Базовый">Базовый — 29 900 ₽</option>
+              <option value="Бизнес" selected>Бизнес — 39 900 ₽</option>
+              <option value="ВИП">ВИП — 59 900 ₽</option>
+              <option value="Не определился">Пока не определился</option>
+            </select>
+          </label>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>Согласен с <a href="#" onclick="return false">политикой конфиденциальности</a> и обработкой персональных данных</span>
+            <em class="field__error">Нужно согласие</em>
+          </label>
+          <button class="btn btn--accent btn--block btn--lg" type="submit">Отправить заявку</button>
+          <p class="form__note">Никакого спама — только информация о курсе</p>
+        </form>
+
+        <div class="form-success" id="formSuccess" hidden aria-live="polite">
+          <span class="form-success__icon" aria-hidden="true">✓</span>
+          <h3>Заявка отправлена!</h3>
+          <p>Спасибо! Менеджер свяжется с вами в течение 15 минут в рабочее время.</p>
+          <button class="btn btn--ghost" type="button" id="formAgain">Отправить ещё одну</button>
+        </div>
+      </div>
+      <div class="signup__glow" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="logo logo--footer" href="#top" aria-label="zerocoder — на главную">
+            <span class="logo__mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 3v26M3 16h26M6.8 6.8l18.4 18.4M25.2 6.8 6.8 25.2" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="logo__text">zerocoder<span class="logo__dot">.</span></span>
+          </a>
+          <p>Университет нейросетей<br>и вайб-кодинга</p>
+          <div class="footer__socials">
+            <a href="#" onclick="return false" aria-label="Telegram — TG">TG</a>
+            <a href="#" onclick="return false" aria-label="YouTube — YT">YT</a>
+            <a href="#" onclick="return false" aria-label="WhatsApp — WA">WA</a>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <div>
+            <h4>Навигация</h4>
+            <a href="#about">О курсе</a>
+            <a href="#program">Программа</a>
+            <a href="#projects">Проекты</a>
+            <a href="#tariffs">Тарифы</a>
+          </div>
+          <div>
+            <h4>Документы</h4>
+            <a href="#" onclick="return false">Политика конфиденциальности</a>
+            <a href="#" onclick="return false">Политика безопасности платежей</a>
+            <a href="#" onclick="return false">Оферта</a>
+            <a href="#" onclick="return false">Лицензия на образовательную деятельность</a>
+          </div>
+          <div>
+            <h4>Контакты</h4>
+            <a href="tel:+79393283812">+7 (939) 328-38-12</a>
+            <a href="mailto:care@zerocoder.ru">care@zerocoder.ru</a>
+            <p class="footer__address">г. Москва, ул. Большая Новодмитровская, 23, этаж 2, каб. 46</p>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 ООО «ЗЕРОКОДЕР». Все права защищены.</p>
+        <p>ИНН 9715401631 · ОГРН 1217700246026</p>
+        <p class="footer__demo">Демо-лендинг в стиле zerocoder.ru</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" id="toTop" aria-label="Наверх">↑</a>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
